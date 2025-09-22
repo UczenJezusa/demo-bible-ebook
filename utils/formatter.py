@@ -9,7 +9,7 @@ def get_margin_right(letter: str) -> str:
     return MARGIN_MAP.get(letter.upper(), '0px')
 
 class VerseFormatter:
-    """Pomocnik do parsowania i budowania/tworzenia nowych wersetów w HTML."""
+    """Helper do parsowania i budowania/tworzenia nowych wersetów w HTML."""
 
     PARSE_VERSE_RE = re.compile(r'<p[^>]*>\s*(\d+\.)?\s*([^\W\d_])([^<]*)(.*)</p>', re.UNICODE)
     PARSE_SPLIT_FIRST_VERSE_RE = re.compile(

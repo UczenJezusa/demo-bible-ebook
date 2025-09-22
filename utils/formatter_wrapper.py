@@ -7,7 +7,7 @@ ParserFn = Callable[[str], Optional[tuple]]
 StatelessSpecialFormatterFn = Callable[[tuple, VerseFormatter], str]
 
 class FormatterWrapper:
-    """Opakowanie (zewnętrzny interfejs, funkcje wyższego poziomu) dla VerseFormatter + dodatkowe helpery."""
+    """Wrapper (zewnętrzny interfejs, funkcje wyższego poziomu) dla VerseFormatter + dodatkowe helpery."""
     def __init__(self):
         self.formatter = VerseFormatter()
 

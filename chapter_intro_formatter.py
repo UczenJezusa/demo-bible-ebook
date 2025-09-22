@@ -13,13 +13,13 @@ def main() -> None:
     if len(sys.argv) > 1:
         filepath = Path(sys.argv[1])
         if not filepath.exists():
-            logger.error('Plik %s nie istnieje.', filepath)
+            logger.error('File %s doesn\'t exist.', filepath)
             return
     else:
         try:
             filepath = next(Path('.').glob('part0000.html'))
         except StopIteration:
-            logger.error("Nie znaleziono pliku 'part0000.html'.")
+            logger.error("File 'part0000.html' wasn\'t found.")
             return
 
     bible_text = Path(filepath).read_text(encoding='utf-8').splitlines(keepends=True)

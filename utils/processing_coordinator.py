@@ -44,6 +44,6 @@ class ProcessingCoordinator:
     def save_back(self, filename: Path) -> None:
         if self.verse_accessor.changes_made > 0:
             filename.write_text(''.join(self.verse_accessor.bible_text), encoding='utf-8')
-            logger.info('Pomyślnie zmodyfikowano plik %s', filename)
+            logger.info('Successfully modified %s file', filename)
         else:
-            logger.info(f'Nie zmodyfikowano pliku {filename}. Nie znaleziono wersetów wymagających formatowania.')
+            logger.info("File %s was not modified. No verses requiring formatting were found.", filename)
